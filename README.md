@@ -1,3 +1,4 @@
 # campo-Minado
 Replica do jogo Campo minado.
-Utilizei a biblioteca JUnit5 para fazer os testes unitários.
+Nesse projeto utilizei o padrão MVC e a biblioteca JUnit5 para fazer os testes unitários.
+
