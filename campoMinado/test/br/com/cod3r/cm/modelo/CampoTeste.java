@@ -2,10 +2,10 @@ package br.com.cod3r.cm.modelo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import br.com.cod3r.cm.excecao.ExplosaoException;
 
 class CampoTeste {
 	
@@ -104,9 +104,9 @@ class CampoTeste {
 	void testeAbrirMinadoNaoMarcado() {
 		campo.minar();
 		
-		assertThrows(ExplosaoException.class, () -> {
-			campo.abrir();
-		});
+//		assertThrows(ExplosaoException.class, () -> {
+//			campo.abrir();
+//		});
 		
 		assertFalse(campo.abrir());
 	}

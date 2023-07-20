@@ -3,8 +3,6 @@ package br.com.cod3r.cm.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.cod3r.cm.excecao.ExplosaoException;
-
 public class Campo {
 	private boolean minado;
 	private boolean aberto;
@@ -54,7 +52,7 @@ public class Campo {
 			aberto = true;
 			
 			if(minado) {
-				throw new ExplosaoException();
+				//TODO 
 			}
 			
 			if(vizinhancaSegura()) {
@@ -119,18 +117,4 @@ public class Campo {
 		marcado = false;
 	}
 	
-	public String toString() {
-		if(marcado) {
-			return "x";
-		} else if(aberto && minado) {
-			return "*";
-		} else if(aberto && minasNaVizinhaca() > 0) {
-			return Long.toString(minasNaVizinhaca());
-		} else if(aberto) {
-			return " ";
-		} else {
-			return "?";
-		}
-	}
-
 }
