@@ -6,6 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+<<<<<<< HEAD
+=======
+import br.com.cod3r.cm.excecao.*;
+>>>>>>> branch 'main' of https://github.com/ricardolimma/campo-Minado.git
 
 class CampoTeste {
 	
