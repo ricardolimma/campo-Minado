@@ -6,6 +6,7 @@ import java.awt.event.MouseListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.SwingUtilities;
 
 import br.com.cod3r.cm.modelo.Campo;
 import br.com.cod3r.cm.modelo.CampoEvento;
@@ -50,10 +51,17 @@ implements CampoObservador, MouseListener {
 			aplicarEstiloPadrao();
 		}
 		
+		
+		SwingUtilities.invokeLater(() -> {
+			repaint();
+			validate();
+		});
+		
 	}
 
 	private void aplicarEstiloPadrao() {
 		setBackground(BG_PADRAO);
+		setBorder(BorderFactory.createBevelBorder(0));
 		setText("");
 	
 	}
@@ -77,7 +85,6 @@ implements CampoObservador, MouseListener {
 		
 		if(campo.isMinado()) {
 			setBackground(BG_EXPLODIR);
-			setText("X");
 			return;
 		}
 		
